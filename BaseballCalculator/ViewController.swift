@@ -34,6 +34,7 @@ class ViewController: UIViewController {
 //        return sluggingPercentage
         let slugging = userStats.calculateSlugging()
         statResult.text = String(slugging)
+        statResult.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
     }
     
     @IBOutlet weak var statResult: UILabel!
