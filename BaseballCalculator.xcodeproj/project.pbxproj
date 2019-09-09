@@ -14,6 +14,7 @@
 		73F0ABDA232344AE0013CD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F0ABD8232344AE0013CD72 /* LaunchScreen.storyboard */; };
 		73F0ABE5232344AE0013CD72 /* BaseballCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0ABE4232344AE0013CD72 /* BaseballCalculatorTests.swift */; };
 		73F0ABF0232344AE0013CD72 /* BaseballCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0ABEF232344AE0013CD72 /* BaseballCalculatorUITests.swift */; };
+		73F0ABFE232344C90013CD72 /* OffensiveStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0ABFD232344C90013CD72 /* OffensiveStats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		73F0ABEB232344AE0013CD72 /* BaseballCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseballCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F0ABEF232344AE0013CD72 /* BaseballCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseballCalculatorUITests.swift; sourceTree = "<group>"; };
 		73F0ABF1232344AE0013CD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73F0ABFD232344C90013CD72 /* OffensiveStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffensiveStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				73F0ABCF232344AD0013CD72 /* AppDelegate.swift */,
 				73F0ABD1232344AD0013CD72 /* ViewController.swift */,
 				73F0ABD3232344AD0013CD72 /* Main.storyboard */,
+				73F0ABFD232344C90013CD72 /* OffensiveStats.swift */,
 				73F0ABD6232344AE0013CD72 /* Assets.xcassets */,
 				73F0ABD8232344AE0013CD72 /* LaunchScreen.storyboard */,
 				73F0ABDB232344AE0013CD72 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				73F0ABD2232344AD0013CD72 /* ViewController.swift in Sources */,
 				73F0ABD0232344AD0013CD72 /* AppDelegate.swift in Sources */,
+				73F0ABFE232344C90013CD72 /* OffensiveStats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,12 +437,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CQH9M62GQ;
 				INFOPLIST_FILE = BaseballCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.scottdantuono.BaseballCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.BaseballCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,12 +455,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CQH9M62GQ;
 				INFOPLIST_FILE = BaseballCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.scottdantuono.BaseballCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.BaseballCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
