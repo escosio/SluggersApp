@@ -24,16 +24,32 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var homerunsInput: UITextField!
     
+    var hits: Double {
+        return Double(hitsInput.text ?? "0") ?? 0.0
+    }
+    
+    var atBats: Double {
+        return Double(atBatsInput.text ?? "0") ?? 0.0
+    }
+    
+    var doubles: Double {
+        return Double(doublesInput.text ?? "0") ?? 0.0
+    }
+    
+    var triples: Double {
+        return Double(triplesInput.text ?? "0") ?? 0.0
+    }
+    
+    var hrs: Double {
+        return Double(homerunsInput.text ?? "0") ?? 0.0
+    }
+    
     @IBAction func calculateButton(_ sender: Any) {
-        let hits = Double(hitsInput.text!)
-        let atBats = Double(atBatsInput.text!)
-        let doubles = Double(doublesInput.text!)
-        let triples = Double(triplesInput.text!)
-        let hrs = Double(homerunsInput.text!)
         let userStats = OffensiveStat(hits: hits, atBats: atBats, doubles: doubles, triples: triples, hrs: hrs)
 //        return sluggingPercentage
         let slugging = userStats.calculateSlugging()
-        statResult.text = String(slugging)
+        let sluggingString = String(format: "%.3f", slugging)
+        statResult.text = sluggingString
         statResult.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
 //        Dismiss keyboard
         homerunsInput.resignFirstResponder()

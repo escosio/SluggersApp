@@ -9,13 +9,13 @@
 import Foundation
 
 class OffensiveStat {
-    var hits: Double!
-    var atBats: Double!
-    var doubles: Double!
-    var triples: Double!
-    var hrs: Double!
+    let hits: Double
+    let atBats: Double
+    let doubles: Double
+    let triples: Double
+    let hrs: Double
     
-    init(hits: Double!, atBats: Double!, doubles: Double!, triples: Double!, hrs: Double!) {
+    init(hits: Double, atBats: Double, doubles: Double, triples: Double, hrs: Double) {
         self.hits = hits
         self.atBats = atBats
         self.doubles = doubles
@@ -24,14 +24,17 @@ class OffensiveStat {
     }
     
     func getBattingAverage() -> Double {
+        guard atBats > 0 else { return 0.0 }
         return hits / atBats
     }
+    
     func calculateSlugging() -> Double {
         let singles: Double! = hits - (doubles + triples + hrs)
         let singlesAndDoubles = singles + (2 * doubles)
         let triplesAndHomers = (3 * triples) + (4 * hrs)
         let totalSumOfHits = singlesAndDoubles + triplesAndHomers
 //        let totalSumOfHits = singles + (2 * doubles) + (3 * triples) + (4 * hrs)
+        guard atBats > 0 else { return 0.0 }
         let slugging: Double = totalSumOfHits / atBats
         return slugging
     }
